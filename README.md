@@ -176,6 +176,16 @@ helm install aws-load-balancer-controller eks/aws-load-balancer-controller \
   --set vpcId=vpc-016b2f6ed3d4fc306 \
   --set image.repository=602401143452.dkr.ecr.us-east-1.amazonaws.com/amazon/aws-load-balancer-controller
 ```
+### Step-04-03: Verify that the controller is installed and Webhook Service created
+
+# Verify that the controller is installed.
+```
+kubectl -n kube-system get deployment 
+```
+kubectl -n kube-system get deployment aws-load-balancer-controller
+```
+kubectl -n kube-system describe deployment aws-load-balancer-controller
+```
 
 
 
