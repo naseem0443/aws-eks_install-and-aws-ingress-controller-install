@@ -186,6 +186,13 @@ kubectl -n kube-system get deployment aws-load-balancer-controller
 ```
 kubectl -n kube-system describe deployment aws-load-balancer-controller
 ```
+# Sample Output
+```
+kubectl get deployment -n kube-system aws-load-balancer-controller
+NAME                           READY   UP-TO-DATE   AVAILABLE   AGE
+aws-load-balancer-controller   2/2     2            2           27s
+Kalyans-MacBook-Pro:08-01-Load-Balancer-Controller-Install kdaida$ 
+```
 
 
 
