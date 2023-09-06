@@ -136,7 +136,7 @@ Obseravation:
 - [Install Helm](https://helm.sh/docs/intro/install/) if not installed
 - [Install Helm for AWS EKS](https://docs.aws.amazon.com/eks/latest/userguide/helm.html)
 
-# Install Hel```m (if not installed) Windows
+# Install Helm (if not installed) Windows
 ```
 choco install kubernetes-helm
 ```
@@ -145,5 +145,26 @@ choco install kubernetes-helm
 ```
 helm version
 ```
+### Step-04-02: Install AWS Load Balancer Controller
+- **Important-Note-1:** If you're deploying the controller to Amazon EC2 nodes that have restricted access to the Amazon EC2 instance metadata service (IMDS), or if you're deploying to Fargate, then add the following flags to the command that you run:
+```
+--set region=region-code
+--set vpcId=vpc-xxxxxxxx
+```
+- **Important-Note-2:** If you're deploying to any Region other than us-west-2, then add the following flag to the command that you run, replacing account and region-code with the values for your region listed in Amazon EKS add-on container image addresses.
+- [Get Region Code and Account info](https://docs.aws.amazon.com/eks/latest/userguide/add-ons-images.html)
+
+--set image.repository=account.dkr.ecr.region-code.amazonaws.com/amazon/aws-load-balancer-controller
+
+# Add the eks-charts repository.
+```
+helm repo add eks https://aws.github.io/eks-charts
+```
+# Update your local repo to make sure that you have the most recent charts.
+```
+helm repo update
+```
+
+
 
 
