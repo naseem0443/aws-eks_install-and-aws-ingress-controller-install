@@ -44,6 +44,10 @@ eksctl get cluster
 ```
 eksctl get nodegroup --cluster=eksdemo1
 ```
+# Delete Cluster
+```
+eksctl delete cluster eksdemo1
+```
 # Verify if any IAM Service Accounts present in EKS Cluster
 ```
 eksctl get iamserviceaccount --cluster=eksdemo1
