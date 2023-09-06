@@ -223,7 +223,7 @@ kubectl describe ingressclass my-aws-ingress-class
 # ALB ingress Yml
 
 # Annotations Reference: https://kubernetes-sigs.github.io/aws-load-balancer-controller/latest/guide/ingress/annotations/
-
+``
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
