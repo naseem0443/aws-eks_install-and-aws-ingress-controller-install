@@ -99,6 +99,7 @@ Policy ARN:  arn:aws:iam::180789647333:policy/AWSLoadBalancerControllerIAMPolicy
 ```
 kubectl get sa -n kube-system
 ```
+```
 kubectl get sa aws-load-balancer-controller -n kube-system
 ```
 Obseravation:
