@@ -63,10 +63,6 @@ aws eks --region us-east-1 update-kubeconfig --name eksdemo1
 kubectl get nodes
 ```
 
-# Verify using AWS Management Console
-1. EKS EC2 Nodes (Verify Subnet in Networking Tab)
-2. EKS Cluster
-```
 
 
 # Download IAM Policy
@@ -87,10 +83,10 @@ aws iam create-policy \
 
 ### Make a note of Policy ARN    
 - Make a note of Policy ARN as we are going to use that in next step when creating IAM Role.
-```t
+
 # Policy ARN 
 Policy ARN:  arn:aws:iam::180789647333:policy/AWSLoadBalancerControllerIAMPolicy
-```
+
 
 ## Step-03: Create an IAM role for the AWS LoadBalancer Controller and attach the role to the Kubernetes service account 
 - Applicable only with `eksctl` managed clusters
@@ -98,7 +94,7 @@ Policy ARN:  arn:aws:iam::180789647333:policy/AWSLoadBalancerControllerIAMPolicy
 - This command also will create Kubernetes Service Account in k8s cluster
 - In addition, this command will bound IAM Role created and the Kubernetes service account created
 ### Step-03-01: Create IAM Role using eksctl
-```t
+
 # Verify if any existing service account
 ```
 kubectl get sa -n kube-system
