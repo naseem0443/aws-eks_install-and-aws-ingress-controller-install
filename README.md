@@ -116,3 +116,34 @@ eksctl create iamserviceaccount \
   --approve
 ```
 
+# Get IAM Service Account
+```
+eksctl  get iamserviceaccount --cluster eksdemo1
+```
+Verify k8s Service Account using kubectl
+```
+kubectl get sa -n kube-system
+```
+```
+kubectl get sa aws-load-balancer-controller -n kube-system
+```
+Obseravation:
+1. We should see a new Service account created. 
+
+
+## Step-04: Install the AWS Load Balancer Controller using Helm V3 
+### Step-04-01: Install Helm
+- [Install Helm](https://helm.sh/docs/intro/install/) if not installed
+- [Install Helm for AWS EKS](https://docs.aws.amazon.com/eks/latest/userguide/helm.html)
+```t
+# Install Hel```m (if not installed) Windows
+```
+choco install kubernetes-helm
+```
+
+# Verify Helm version
+```
+helm version
+```
+
+
