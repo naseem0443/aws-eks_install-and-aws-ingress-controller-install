@@ -135,7 +135,7 @@ Obseravation:
 ### Step-04-01: Install Helm
 - [Install Helm](https://helm.sh/docs/intro/install/) if not installed
 - [Install Helm for AWS EKS](https://docs.aws.amazon.com/eks/latest/userguide/helm.html)
-```t
+
 # Install Hel```m (if not installed) Windows
 ```
 choco install kubernetes-helm
