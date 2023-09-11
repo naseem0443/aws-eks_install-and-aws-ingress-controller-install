@@ -193,6 +193,8 @@ kubectl -n kube-system describe deployment aws-load-balancer-controller
 # Sample Output
 ```
 kubectl get deployment -n kube-system aws-load-balancer-controller
+```
+```
 NAME                           READY   UP-TO-DATE   AVAILABLE   AGE
 aws-load-balancer-controller   2/2     2            2           27s
 ```
@@ -200,6 +202,18 @@ aws-load-balancer-controller   2/2     2            2           27s
 # Uninstall AWS Load Balancer Controller
 ```
 helm uninstall aws-load-balancer-controller -n kube-system 
+```
+# Create Ingress resource 
+```
+apiVersion: networking.k8s.io/v1
+kind: IngressClass
+metadata:
+  name: my-aws-ingress-class
+  annotations:
+    ingressclass.kubernetes.io/is-default-class: "true"
+spec:
+  controller: ingress.k8s.aws/alb
+
 ```
 # Create IngressClass Resource
 ```
